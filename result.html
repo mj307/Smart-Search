@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Summarizer</title>
+    <title>Result</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -25,46 +25,26 @@
             padding: 10px 0;
         }
 
-        header ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        header ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        header ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        header ul li a:hover {
-            border-bottom: 2px solid #fff;
-        }
-
         .section {
             padding: 20px 0;
         }
 
-        textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
+        p {
+            font-size: 18px;
+            line-height: 1.8;
         }
 
-        input[type="submit"] {
+        .button {
+            display: inline-block;
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
-            border: none;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
         }
 
-        input[type="submit"]:hover {
+        .button:hover {
             background-color: #0056b3;
         }
 
@@ -86,26 +66,14 @@
 <body>
     <header>
         <div class="container">
-            <h1>Smart Search</h1>
+            <h1>Results</h1>
         </div>
     </header>
 
-    <section id="about" class="section">
+    <section class="section">
         <div class="container">
-            <h2>About</h2>
-            <p>Got a question about the book you're reading? We have an answer!</p>
-            <p> Type in whatever questions you have, and we will provide an answer for you!</p>
-        </div>
-    </section>
-
-    <section id="services" class="section">
-        <div class="container">
-            <h2>Services</h2>
-            <form action="/summarize/" method="post">
-                <label for="query">Enter your question here:</label><br>
-                <textarea id="query" name="query" rows="4" cols="50"></textarea><br><br>
-                <input type="submit" value="Enter">
-            </form>
+            <p>{{ summary }}</p>
+            <a href="/" class="button">Back to Chatbot</a>
         </div>
     </section>
 

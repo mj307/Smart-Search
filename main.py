@@ -20,14 +20,21 @@ templates = Jinja2Templates(directory="templates")
 class QueryModel(BaseModel):
     query: str = Query(..., description="Query to summarize the document")
 
-# Your existing setup code
+
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=350, chunk_overlap=100, add_start_index=True)
 loader = PyPDFLoader("brain.pdf")
 docs = loader.load()
 all_splits = text_splitter.split_documents(docs)
 vectordb = Chroma.from_documents(documents=all_splits, embedding=embeddings, persist_directory="braindb")
-llm = Ollama(model="llama3")
+
+#llm = Ollama(model="llama3")
+
+llm = Ollama(model="llama3", base_url='http://host.docker.internal:11434')
+
+#from ollama import Client
+#client = Client(host='http://localhost:11434')
+#response = client.chat(model='llama3')
 
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
