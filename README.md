@@ -48,7 +48,7 @@ Open a web browser and navigate to http://localhost:8000 or the appropriate URL 
 
 **index.html, result.html**: HTML files used by the application
 
-**brain.pdf**: PDF file that I hardcoded into the application
+**brain.pdf**: PDF file so the application has the context to answer questions
 
 **main.py**: Main Python script
 
