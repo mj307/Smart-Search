@@ -14,7 +14,7 @@
 ### Prerequisites
 
 - **Docker**: Make sure Docker is installed. You can get it from [here](https://docs.docker.com/get-docker/).
-- **Ollama**: Make sure Ollama is installed as well. You can get it from [here](https://ollama.com/download).
+- **Ollama Server**: Make sure the Ollama server is installed as well. You can get it from [here](https://ollama.com/download).
 
 
 ### Setup Instructions
