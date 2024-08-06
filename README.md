@@ -22,7 +22,7 @@
 1. **Clone the Repository**
    ```shell
    git clone https://github.com/mj307/Smart-Search.git
-   cd repository
+   cd Smart-Search
    ```
 2. **Build the Docker Image**
    ```shell
