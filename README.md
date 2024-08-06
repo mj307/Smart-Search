@@ -41,15 +41,21 @@ Open a web browser and navigate to http://localhost:8000 or the appropriate URL 
 
 ## Files
 **Dockerfile**: Docker configuration file
+
 **index.html, result.html**: HTML files used by the application
+
 **brain.pdf**: PDF file that I hardcoded into the application
+
 **main.py**: Main Python script
+
 **requirements.txt**: List of Python dependencies
 
 
 ## Troubleshooting
 **Docker Build Issues**: If you encounter errors while building the Docker image, ensure that your Dockerfile is correctly configured and that all files listed in it are present
+
 **Port Conflicts**: If port 8000 is already in use, you can change the port mapping by modifying -p 8000:8000 to a different port, such as -p 8080:8000
+
 **Container Logs**: To check the logs of a running container:
 ```shell
 docker logs <container_id>
