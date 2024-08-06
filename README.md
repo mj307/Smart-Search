@@ -4,7 +4,9 @@
 
 ## Features
 👍 User-Friendly Dashboard: Clear and intuitive interface with easy-to-follow instructions
+
 🗣️ Interactive Chatbox: Ask your questions directly and get instantaneous answers
+
 📈 Comprehensive Results Page: View detailed search results and relevant information in one place
 
 ## Getting Started ##
