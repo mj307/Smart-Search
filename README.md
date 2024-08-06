@@ -30,10 +30,11 @@
    ```
 3. **Run the Docker Container**
    ```shell
-   docker run -d -p 8000:8000 smartsearch:v1
+   docker run -d -p 8000:8000 -e PDF='/app/brain.pdf' smartsearch:v1
    ```
     -d runs the container in detached mode (in the background).
    -p 8000:8000 maps port 8000 on your host to port 8000 in the container. You can adjust this if your application uses a different port.
+   -e specifies that we are using an env variable (so we aren't hard coding any values). In this case, I'm using the brain.pdf PDF which already exists in my directory.
 
 
 5. **Access the Application**
@@ -62,4 +63,4 @@ docker logs <container_id>
 ```
 
 ## Future Iterations
-- Currently, I am hardcoding the textbook PDF into the Python code. In the future, I plan to modify the code to accept the textbook path as an input parameter when running the Docker container.
+- Currently, my code can only take in files that have been already uploaded in the /app directory as input during the *docker run* portion. In the future, I want to build an upload function in my dashboard so that users can upload any file and have the **Smart Search** analyze that. 
