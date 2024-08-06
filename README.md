@@ -64,6 +64,15 @@ Open a web browser and navigate to http://localhost:8000 or the appropriate URL 
 ```shell
 docker logs <container_id>
 ```
+**Docker Logs**: In the event where your containers aren't able to start up, you can look at your docker logs to see what the issue may be. Navigate here to get to the location of the logs:
+```shell
+/Library/Containers/com.docker.docker/Data/log/
+```
+
+Run this command to see the content of the logs:
+```shell
+tail -f /Library/Containers/com.docker.docker/Data/log/<log_filename>
+```
 
 ## Future Iterations
 - Currently, my code can only take in files that have been already uploaded in the /app directory as input during the *docker run* portion. In the future, I want to build an upload function in my dashboard so that users can upload any file and have the **Smart Search** analyze that. 
