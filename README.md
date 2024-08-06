@@ -39,7 +39,8 @@
    -e specifies that we are using an env variable (so we aren't hard coding any values). In this case, I'm using the brain.pdf PDF which already exists in my directory (I'm setting PDF='/app/brain.pdf') and I'm specifying the host of the image which is 'http://host.docker.internal:11434'. 
 
 
-5. **Access the Application**
+4. **Access the Application**
+   
 Open a web browser and navigate to http://localhost:8000 or the appropriate URL based on your application configuration.
 
 ## Files
