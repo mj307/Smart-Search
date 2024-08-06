@@ -30,11 +30,11 @@
    ```
 3. **Run the Docker Container**
    ```shell
-   docker run -d -p 8000:8000 -e PDF='/app/brain.pdf' smartsearch:v1
+   docker run -d -p 8000:8000 -e PDF='/app/brain.pdf' -e HOST='http://host.docker.internal:11434' smartsearch:v1
    ```
     -d runs the container in detached mode (in the background).
    -p 8000:8000 maps port 8000 on your host to port 8000 in the container. You can adjust this if your application uses a different port.
-   -e specifies that we are using an env variable (so we aren't hard coding any values). In this case, I'm using the brain.pdf PDF which already exists in my directory.
+   -e specifies that we are using an env variable (so we aren't hard coding any values). In this case, I'm using the brain.pdf PDF which already exists in my directory (I'm setting PDF='/app/brain.pdf') and I'm specifying the host of the image which is 'http://host.docker.internal:11434'. 
 
 
 5. **Access the Application**
