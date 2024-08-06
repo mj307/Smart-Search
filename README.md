@@ -1,11 +1,11 @@
-# Smart Search
+# Smart Search 📚
 
 **Smart Search** is a RAG-based application that lets you quickly find answers to specific questions within the content you're reading, so you don't have to sift through the entire material to find what you're looking for.
 
 ## Features
-- User-Friendly Dashboard: Clear and intuitive interface with easy-to-follow instructions
-- Interactive Chatbox: Ask your questions directly and get instantaneous answers
-- Comprehensive Results Page: View detailed search results and relevant information in one place
+👍 User-Friendly Dashboard: Clear and intuitive interface with easy-to-follow instructions
+🗣️ Interactive Chatbox: Ask your questions directly and get instantaneous answers
+📈 Comprehensive Results Page: View detailed search results and relevant information in one place
 
 ## Getting Started ##
 
@@ -46,10 +46,12 @@ Open a web browser and navigate to http://localhost:8000 or the appropriate URL 
 
 
 ## Troubleshooting
-**Docker Build Issues**: If you encounter errors while building the Docker image, ensure that your Dockerfile is correctly configured and that all files listed in it are present.
-**Port Conflicts**: If port 8000 is already in use, you can change the port mapping by modifying -p 8000:8000 to a different port, such as -p 8080:8000.
+**Docker Build Issues**: If you encounter errors while building the Docker image, ensure that your Dockerfile is correctly configured and that all files listed in it are present
+**Port Conflicts**: If port 8000 is already in use, you can change the port mapping by modifying -p 8000:8000 to a different port, such as -p 8080:8000
 **Container Logs**: To check the logs of a running container:
 ```shell
 docker logs <container_id>
 ```
 
+## Future Iterations
+- Currently, I am hardcoding the textbook PDF into the Python code. In the future, I plan to modify the code to accept the textbook path as an input parameter when running the Docker container.
